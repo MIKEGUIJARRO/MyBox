@@ -1,0 +1,56 @@
+<div class="container p-4">
+    <div class="row">
+        {{#if drivers}}
+        <div class="col-md-12">
+            <h1>Drivers</h1>
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Identification</th>
+                            <th scope="col">First name</th>
+                            <th scope="col">Last Name 1</th>
+                            <th scope="col">Last Name 2</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Salary</th>
+                            <th scope="col">State of Residence</th>
+                            <th scope="col">Options</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each drivers}}
+                        <tr>
+                            <th>{{id}}</th>
+                            <td>{{identification}}</td>
+                            <td>{{first_name}}</td>
+                            <td>{{last_name1}}</td>
+                            <td>{{last_name2}}</td>
+                            <td>{{phone}}</td>
+                            <td>{{address}}</td>
+                            <td>{{salary}}</td>
+                            <td>{{state}}</td>
+                            <td id="option">
+                                <div class="d-flex justify-content-around align-items-center">
+                                    <a href="/drivers/edit/{{id}}"><i class="fas fa-edit"></i></a>
+                                    <a href="/drivers/delete/{{id}}"><i class="fas fa-trash delete"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <h1>Drivers</h1>
+            <div class="card card-body text-center">
+                <p>There are no drivers saved yet.</p>
+                <a href="/drivers/add">Add one!</a>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+</div>

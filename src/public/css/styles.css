@@ -1,0 +1,40 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#option{
+    vertical-align: middle !important;
+}
+
+.page-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    height: 800px;
+    background: url('/img/bg.jpg');
+}
+.masthead {
+    min-height: 30rem;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-block {
+    height: 500px;
+    background: #333333;
+}
+
+.t-white {
+    color: white;
+}
+
+.logo-nav {
+    height: 25px;
+    width: auto;
+    padding-right: 10px;
+}
+
+.delete {
+    color: salmon;
+}

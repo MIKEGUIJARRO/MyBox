@@ -1,0 +1,34 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Edit Truck</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/trucks/edit/{{truck.plate}}" method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="plate" placeholder="Plate"
+                                value="{{truck.plate}}" autofocus required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="model" placeholder="Model"
+                                value="{{truck.model}}" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="type" placeholder="Type"
+                                value="{{truck.type}}" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="tire_size" placeholder="Tire Size"
+                                value="{{truck.tire_size}}" required>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

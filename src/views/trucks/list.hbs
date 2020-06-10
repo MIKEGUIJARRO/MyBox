@@ -1,0 +1,46 @@
+<div class="container p-4">
+    <div class="row">
+        {{#if trucks}}
+        <div class="col-md-12">
+            <h1>Trucks</h1>
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Plate</th>
+                            <th scope="col">Model</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Tire Size</th>
+                            <th scope="col">Options</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each trucks}}
+                        <tr>
+                            <th>{{plate}}</th>
+                            <td>{{model}}</td>
+                            <td>{{type}}</td>
+                            <td>{{tire_size}}</td>
+                            <td id="option">
+                                <div class="d-flex justify-content-around align-items-center">
+                                    <a href="/trucks/edit/{{plate}}"><i class="fas fa-edit"></i></a>
+                                    <a href="/trucks/delete/{{plate}}"><i class="fas fa-trash delete"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <h1>Trucks</h1>
+            <div class="card card-body text-center">
+                <p>There are no trucks saved yet.</p>
+                <a href="/trucks/add">Add one!</a>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+</div>
