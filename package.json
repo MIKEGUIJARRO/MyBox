@@ -4,6 +4,7 @@
   "description": "Final project of Database subject",
   "main": "app.js",
   "scripts": {
+    "start": "node src/app.js",
     "dev": "nodemon src/app.js"
   },
   "author": "mike guijarro",
