@@ -1,17 +1,17 @@
 
--- sudo mysql -u root -p
--- https://devhints.io/mysql
--- https://www.mysqltutorial.org/mysql-cheat-sheet.aspx/
--- DESCRIBE TABLE
+# sudo mysql -u root -p
+# https://devhints.io/mysql
+# https://www.mysqltutorial.org/mysql-cheat-sheet.aspx/
+# DESCRIBE TABLE
 
---https://www.bennadel.com/blog/2913-using-the-insert-into-set-syntax-in-mysql.htm
+# https://www.bennadel.com/blog/2913-using-the-insert-into-set-syntax-in-mysql.htm
 
 
 CREATE DATABASE database_packages;
 
 USE database_packages;
 
---Table Users
+# Table Users
 CREATE TABLE Users(
     id INT(11) NOT NULL AUTO_INCREMENT,
     username VARCHAR(16) NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE Users(
     PRIMARY KEY (id)
 );
 
---Table Trucks
+# Table Trucks
 CREATE TABLE Trucks(
     plate VARCHAR(10) NOT NULL,
     model VARCHAR(25) NOT NULL,
@@ -29,18 +29,18 @@ CREATE TABLE Trucks(
     PRIMARY KEY (plate)
 );
 
---Table State
+# Table State
 CREATE TABLE States (
     id INT(11) NOT NULL AUTO_INCREMENT,
     name VARCHAR(30) NOT NULL,
     PRIMARY KEY (id)
 );
 
---Add column to State
+# Add column to State
 ALTER TABLE States
 ADD abbreviation VARCHAR(2) NOT NULL AFTER name;
 
---Table Drivers
+# Table Drivers
 CREATE TABLE Drivers(
     id INT(11) NOT NULL AUTO_INCREMENT,
     identification VARCHAR(50) NOT NULL,
@@ -55,12 +55,12 @@ CREATE TABLE Drivers(
     FOREIGN KEY (state_id_residence) REFERENCES States (id)
 );
 
---Alter table address varchar(100)
+# Alter table address varchar(100)
 ALTER TABLE Drivers MODIFY address VARCHAR(50);
 ALTER TABLE Drivers MODIFY first_name VARCHAR(50);
 
 
---Table TruckSchedules
+# Table TruckSchedules
 CREATE TABLE TruckSchedules(
     id INT(11) NOT NULL AUTO_INCREMENT,
     start_date DATE NOT NULL,
@@ -74,7 +74,7 @@ CREATE TABLE TruckSchedules(
     FOREIGN KEY (user_id) REFERENCES Users(id)
 );
 
---Table Packages
+# Table Packages
 CREATE TABLE Packages(
     id INT(11) NOT NULL AUTO_INCREMENT,
     description VARCHAR(150) NOT NULL,  
@@ -91,15 +91,15 @@ CREATE TABLE Packages(
     FOREIGN KEY (state_id_recipient) REFERENCES States (id)
 );
 
---Table Delivery
+# Table Delivery
 CREATE TABLE Deliveries(
     id INT(11) NOT NULL AUTO_INCREMENT,
     package_ids JSON NOT NULL,
     PRIMARY KEY (id)
 );
 
--- ADD the states to the DB
---https://www.drupal.org/node/2559555
+# ADD the states to the DB
+# https://www.drupal.org/node/2559555
 INSERT INTO States (name, abbreviation) VALUES 
 ('Aguascalientes', 'AG'),
 ('Baja California', 'BC'),
