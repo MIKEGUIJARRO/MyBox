@@ -35,7 +35,7 @@ A trucker may drive different trucks on different dates, and one truck may be dr
 
 ## Entity Relationship Diagram 🧩
 ![Alt text](Entity-diagram.png?raw=true "Relationship Diagram")
-## Relational Diagram
+## Relational Diagram 🧩
 ![Alt text](Relational-diagram.png?raw=true "Relational Diagram")
-## MySQL
+## MySQL 📋
 The Databases and tables scripts can be found at /databases/db.sql
