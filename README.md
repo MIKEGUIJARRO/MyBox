@@ -15,6 +15,8 @@ Web app implementation using mySQL, Nodejs, Express, Handlebars among others. Th
 ⚡️ Data encryption\
 ⚡️ Well organized backend
 
+To view the current webpage, **[click here](https://my-box-mx.herokuapp.com/)**
+
 ## Technologies used 🛠️
 - [Express](https://expressjs.com/) - Backend framework for web applications\
 - [Handlebars](https://handlebarsjs.com/) - Frontend templating engine\
